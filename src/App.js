@@ -1,30 +1,29 @@
 import {useState, useEffect} from 'react';
+import { getArticlesByWord } from './api';
 import './App.css';
-import axios from 'axios';
-
-// const src = "https://content.guardianapis.com/search?page=2&q=debate&api-key=test";
-// axios.get(src).then(data => {
-//   console.log(data);
-// });
 
 function App() {
 
-  const [result, setResult] = useState(0);
-  const [result2, setResult2] = useState(0);
+  const [articles, setArticles] = useState([]);
 
   useEffect(()=>{
-    setResult2(result*2);
-  }, [result]);
+    getData('debates');
+  },[]);
+
+  const getData = async (word) => {
+    const data = await getArticlesByWord(word);
+    setArticles(data.data.response.results);
+  }
 
   return (
     <div className="App">
-      <h1>Result = {result}</h1>
-      <h1>Result * 2 = {result2}</h1>
-      <button 
-        onClick={()=>{
-          setResult(result+1);
-        }}
-      >Plus Result</button>
+      {articles.map(article => {
+        return (
+          <p key={article.id}>
+            <a href={article.webUrl}>{article.webTitle}</a>
+          </p>
+        );
+      })}
     </div>
   );
 }
