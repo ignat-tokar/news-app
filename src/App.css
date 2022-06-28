@@ -37,6 +37,14 @@
   }
 }
 
+input {
+  font-size: 20pt;
+}
+
 button {
   font-size: 20pt;
+}
+
+a {
+  margin-right: 5pt;
 }
