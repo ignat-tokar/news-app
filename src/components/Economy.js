@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArticlesByTag } from "../api";
 
-function Sport () {
+function Economy() {
 
   const [articles, setArticles] = useState([]);
 
@@ -10,13 +10,14 @@ function Sport () {
   }, []);
 
   const getData = async () => {
-    const data = await getArticlesByTag('sport/sport');
-    setArticles(data.data.response.results);
+    const data = await getArticlesByTag('economics/economics');
+    // setArticles(data.data.response.results);
+    console.log(data);
   }
 
   return (
     <>
-      <h1>Sport</h1>
+      <h1>Economy</h1>
       {articles.map(article => {
         return (
           <div>
@@ -29,4 +30,4 @@ function Sport () {
   );
 }
 
-export default Sport;
+export default Economy;
