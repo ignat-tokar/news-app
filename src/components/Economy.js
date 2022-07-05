@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getArticlesByTag } from "../api";
+import NewsInfo from "./NewsInfo";
 
 function Economy() {
 
@@ -10,21 +11,15 @@ function Economy() {
   }, []);
 
   const getData = async () => {
-    const data = await getArticlesByTag('economics/economics');
-    // setArticles(data.data.response.results);
-    console.log(data);
+    const data = await getArticlesByTag('enterprise/enterprise');
+    setArticles(data.data.response.results);
   }
 
   return (
     <>
       <h1>Economy</h1>
       {articles.map(article => {
-        return (
-          <div>
-            <h2>{article.webTitle}</h2>
-            <p>hello</p>
-          </div>
-        );
+        return <NewsInfo article={article} />;
       })}
     </>
   );

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getArticlesByTag } from "../api";
+import NewsInfo from "./NewsInfo";
 
 function Politics() {
 
@@ -18,12 +19,7 @@ function Politics() {
     <>
       <h1>Politics</h1>
       {articles.map(article => {
-        return (
-          <div>
-            <h2>{article.webTitle}</h2>
-            <p>hello</p>
-          </div>
-        );
+        return <NewsInfo article={article} />;
       })}
     </>
   );
