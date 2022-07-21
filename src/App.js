@@ -13,12 +13,16 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <div>
-          <NavLink exact to="/">Main</NavLink>
-          <NavLink to="/politics">Politics</NavLink>
-          <NavLink to="/sport">Sport</NavLink>
-          <NavLink to="/media">Media</NavLink>
-          <NavLink to="/economy">Economy</NavLink>
+        <div className="Main-banner">
+          <div className="Navlink-bar">
+            <NavLink exact to="/">Main</NavLink>
+            <NavLink to="/politics">Politics</NavLink>
+            <NavLink to="/sport">Sport</NavLink>
+            <NavLink to="/media">Media</NavLink>
+            <NavLink to="/economy">Economy</NavLink>
+          </div>
+          <h1>Australian debates commission could signal end of inane</h1>
+          <p>It was the proposal designed to take the heat out of when and where the leaders of the two major parties would debate each other in the lead-up to the election.</p>
         </div>
         <Routes>
           <Route exact path="/" element={<MainPage />} />
