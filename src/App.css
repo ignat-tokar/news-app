@@ -43,19 +43,38 @@
   margin-left: 40pt;
 }
 
-/* .News-info { */
+.Wrapper h1 {
+  text-align: center;
+  width: 100%;
+  font-size: 40pt
+}
+
+.News-info {
+  width: 60%;
+  margin: auto;
+}
 /*  */
 /* } */
-/* .News-info h2 { */
+.News-info h2 {
+  font-size: 30pt;
+}
+.News-info h2:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
 /*  */
 /* } */
-/* .News-info img { */
+.News-info img {
+  width: 100%;
+}
 /*  */
 /* } */
 /* .News-info p { */
 /*  */
 /* } */
-/* #date-info { */
+#date-info {
+  text-align: center;
+}
 /*  */
 /* } */
 

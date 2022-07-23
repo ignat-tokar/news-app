@@ -16,12 +16,12 @@ function Sport () {
   }
 
   return (
-    <>
+    <div className="Wrapper">
       <h1>Sport</h1>
       {articles.map(article => {
         return <NewsInfo article={article} />;
       })}
-    </>
+    </div>
   );
 }
 

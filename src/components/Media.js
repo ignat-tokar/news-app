@@ -15,11 +15,11 @@ function Media(){
   }
 
   return (
-    <>
+    <div className="Wrapper">
       {articles.map(article => {
         return <NewsInfo article={article} />
       })}
-    </>
+    </div>
   );
 }
 

@@ -16,12 +16,12 @@ function Politics() {
   }
 
   return (
-    <>
+    <div className="Wrapper">
       <h1>Politics</h1>
       {articles.map(article => {
         return <NewsInfo article={article} />;
       })}
-    </>
+    </div>
   );
 }
 
